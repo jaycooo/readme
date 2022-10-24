@@ -3,7 +3,7 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 
 //linking to page where read me is developed
-const generatePage = require(./utils/markdown.js);
+const generatePage = require('./utils/markdown.js');
 
 //array of questions for user
 const questions = () => {
@@ -24,7 +24,7 @@ const questions = () => {
 },
 {
     type: 'input',
-    name: 'email';
+    name: 'email',
     message: 'what is your email address',
     validate: nameInput => {
         if (nameInput) {
@@ -101,7 +101,7 @@ const questions = () => {
         name: 'contributors',
         message: 'what does the user need to know about contributing to the repo?'
     }
-});
+]);
 };
 
 // function to write README file using file system
